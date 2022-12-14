@@ -17,7 +17,6 @@ const SetRelation = ({users, setUsers, userNames}) => {
                             [user1]: {friends: [...users[user1]?.friends, user2]},
                             [user2]: {friends: [...users[user2]?.friends, user1]}
                         }))
-        console.log(users)
     }
   
   

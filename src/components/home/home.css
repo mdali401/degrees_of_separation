@@ -49,16 +49,17 @@
     flex-direction: column;
     justify-content: center;
     width: fit-content;
-    padding: 10px;
     border-radius: 10px;
 }
 
 .finddegree_result .error {
     color: red;
+    padding-inline: 10px;
 }
 
 .eachdegree_result {
     text-align: left;
+    padding-inline: 10px;
 }
 
 .users_list > div {
