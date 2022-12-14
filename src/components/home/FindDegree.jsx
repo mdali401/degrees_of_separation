@@ -83,7 +83,7 @@ const FindDegree = ({users, userNames}) => {
         </Box>
         {degreeResult &&
             <Box className='finddegree_result'>
-                {degreeResult.map(item => <p key={item}>{item}</p>)}
+                {degreeResult.map((item,index) => <p className='eachdegree_result' key={item}>{item == 'No connection' ? '' : index+1+'.'} {item}</p>)}
                 {errorMessage && <p className='error'>{errorMessage}</p>}
             </Box>
         }
