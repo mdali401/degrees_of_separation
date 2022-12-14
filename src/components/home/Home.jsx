@@ -4,7 +4,7 @@ import AddUsers from './AddUsers';
 import ViewUsers from './ViewUsers';
 import FindDegree from './FindDegree';
 import SetRelation from './SetRelation';
-import {HashRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import './home.css'
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
   }
 
   return (
-    <HashRouter basename='/'>
+    <>
         <Grid className='grid_buttons' container>
 
           <Link to='/' className='link' >
@@ -37,14 +37,14 @@ const Home = () => {
 
         </Grid>
 
-        
+        <Routes>
           <Route path='/' element={<AddUsers users={users} setUsers={setUsers}/>} />
           <Route path='relation' element={<SetRelation users={users} setUsers={setUsers} userNames={userNames}/>} />
           <Route path='view' element={<></>} />
           <Route path='degree' element={<FindDegree users={users} userNames={userNames}/>} />
-    
+        </Routes>
         <ViewUsers users={users} userNames={userNames}/>
-    </HashRouter>
+    </>
   )
 }
 
